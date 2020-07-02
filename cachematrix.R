@@ -1,3 +1,4 @@
+#this function is for the initiation of the cache matrix
 makeCacheMatrix<-function(x=matrix()){
   inv<-NULL
   set<-function(y)
@@ -11,6 +12,7 @@ makeCacheMatrix<-function(x=matrix()){
   list(set=set,get=get,setInverse=setInverse,getInverse=getInverse)
   
 }
+#this function is used to get inverse of a matrix
 cachesolve<-function(x,...){
   inv<x$getInverse()
   if(!is.null(inv)){
